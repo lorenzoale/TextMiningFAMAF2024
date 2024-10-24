@@ -66,6 +66,7 @@ registros médicos electrónicos, es necesario cumplir con las regulaciones gube
 por la Autoridad de Protección de Datos francesa, la Comisión Nacional de Informática y Libertades
 (CNIL), [cni20] y el Reglamento General de Protección de Datos (RGPD). [rgp].
 
+```bibtex
 @article{azzouzi2024automatic,
   title={Automatic de-identification of French electronic health records: a cost-effective approach exploiting distant supervision and deep learning models},
   author={Azzouzi, Mohamed El and Coatrieux, Gouenou and Bellafqira, Reda and Delamarre, Denis and Riou, Christine and Oubenali, Naima and Cabon, Sandie and Cuggia, Marc and Bouzill{\'e}, Guillaume},
@@ -76,4 +77,4 @@ por la Autoridad de Protección de Datos francesa, la Comisión Nacional de Info
   year={2024},
   publisher={Springer}
 }
-
+```
