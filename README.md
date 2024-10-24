@@ -64,7 +64,7 @@ identificación directa (DIE).
 En Francia, para garantizar la protección de la confidencialidad de los datos personales en los
 registros médicos electrónicos, es necesario cumplir con las regulaciones gubernamentales establecidas
 por la Autoridad de Protección de Datos francesa, la Comisión Nacional de Informática y Libertades
-(CNIL), [cni20] y el Reglamento General de Protección de Datos (RGPD). [rgp].
+(CNIL), [cni20][[1]](#1) y el Reglamento General de Protección de Datos (RGPD). [rgp].
 
 ```bibtex
 @article{azzouzi2024automatic,
@@ -78,3 +78,9 @@ por la Autoridad de Protección de Datos francesa, la Comisión Nacional de Info
   publisher={Springer}
 }
 ```
+## References
+<a id="1">[1]</a> 
+Dijkstra, E. W. (1968). 
+Go to statement considered harmful. 
+Communications of the ACM, 11(3), 147-148.
+
