@@ -85,6 +85,77 @@ abierto o capacitados internamente para esta tarea (en lugar de GPT4 ya que su c
 al público), para garantizar la seguridad, la privacidad, la integridad y el cumplimiento adecuado de
 las pautas HIPAA.
 
+[[5]](#5) propone un proceso automatizado y certificado de desidentificación de textos clı́nicos de
+la Universidad de California, San Francisco (UCSF), que cumple con la regla de privacidad de la Ley de
+Portabilidad y Responsabilidad de Seguros Médicos (HIPAA) para los estándares de desidentificación.
+El desarrollo y la auditorı́a de la herramienta llevaron varios años. Los textos clı́nicos desidentificados
+certificados están disponibles para la comunidad de investigación de la UCSF sin necesidad de ninguna
+otra aprobación de las Juntas de Revisión Institucional (IRB). Sin embargo, todavı́a hay algunos req-
+uisitos de acceso vigentes. Continúan con el desarrollo activo para mejorar los problemas de redacción
+o las mejoras. Además, para seguir cumpliendo con la HIPAA, el proceso de desidentificación y los
+datos deben certificarse cada 2 años.
+
+Algunas iniciativas para la desidentificación automática en francés incluyen la herramienta Medina
+(gratuita) [[6]](#6) y la herramienta ALADIN (propietaria) [[7]](#7), dos herramientas basadas
+en reglas. En[[8]](#8), los autores proponen un método hı́brido de desidentificación evaluado en
+una muestra de textos del conjunto de datos de los servicios de salud de la Assistance Publique
+des Hôpitaux de Paris. Combinan reglas, bases de conocimiento y redes neuronales. Sin embargo, la
+naturaleza personal de los datos hace necesario configurar un conjunto de datos anotados e imposibilita
+la publicación del modelo aprendido. En un enfoque hı́brido similar, más recientemente, en [[9]](#9),
+los autores proponen un proceso de desidentificación automática para todo tipo de documentos clı́nicos
+basado en un método supervisado a distancia. La limitación de este estudio es que entrenan el modelo
+en un corpus de un solo hospital, lo que puede resultar en una falta de generalización.
+
+## 2.2 Propuesta
+Datos a desidentificar:
+1. Nombres y apellidos del paciente
+2. Fecha de nacimiento
+3. Fecha de consulta
+4. Otras fechas?
+5. Nombres y apellidos de médicos
+6. Números de telefono y de fax
+7. Direcciones de correo electrónico
+8. Números de seguro social
+9. Números de registros médicos
+10. Direcciones: calle, ciudad, codigo postal.
+11. Identificadores sobre la consulta
+12. Números identificación del paciente
+13. Centro de salud (hospitales y centros de anatomopalogia)
+Dado que tenemos datos de los pacientes como nombre, apellido, fecha de nacimiento, etc para
+cada uno de los reportes, una idea seria usar un metodo basado en reglas (por ejemplo con expresiones
+regulares) que pueda detectar estas entidades.
+
+Además, de una manera similar a la propuesta en [[9]](#9), seria bueno usar datos del gobierno
+sobre los medicos y centros de salud que figuren como entidades.
+Sin embargo, para obtener el texto correspondiente al informe patológico, primero hay que utilizar
+un OCR sobre los documentos escaneados. Este paso previo es muy propenso a introducir errores, en
+particular cuando los distintos documentos escaneadas presentan mucha diferencia de calidad. Estos
+errores hacen que las reglas a aplicar no sean tan efectivas. Para mejorar este problema una opción
+es hacer corrección de errores como preprocesamiento, y/o aplicar en conjunto un metodo estadistico.
+En la bibliografia combinan métodos estadisticos con reglas. Se pueden pensar en varias opciones para
+esto:
+1. Un enfoque similar al de [[9]](#9) seria usar reglas para anotar datos y luego usar estos datos
+anotados para entrenar un metodo estadistico.
+2. Otro enfoque podria ser hacer etapas donde aplicamos primero reglas y luego un método estadis-
+tico.
+
+## 2.3 Planificación
+1. Hacer un preprocesamiento o curage de datos sobre los reportes patológicos: tokenizar, probar
+sacar “stop words” o no.
+2. Definir reglas para identificar las posibilidades de variaciones del nombre de los pacientes, fecha
+de nacimiento, dirección, etc.
+3. Obtener base de datos de medicos y centros de salud del pais correspondiente.
+4. Definir reglas para buscar información de los médicos y centros de salud previamente definidos.
+5. Podemos usar métodos/modelos de NER existentes para extraer entidades. Dependiendo de los
+modelos las entidades que podemos obtener. Probar distintos modelos.
+6. Hacer fine tunning con los datos extraidos de las reglas y obtener nuevas entidades?
+7. Anotación: parte de la anotación es con las reglas y/o algoritmo de NER elegido. Pero para
+visualizar los resultados una herramienta de anotación es de mucha ayuda. La herramienta
+elegida debe ejecutarse en local debido a la privacidad de los datos. Además seria bueno que
+tenga licencia de software libre. Una que comencé a explorar hace un tiempo (no en mucho
+detalle) es Inception [], TODO: ver otras.Doccano??
+8. Evaluación: Las métricas de evaluación elegidas son: Exactitud, Precisión, Sensibilidad y F1
+score.
 
 ## References
 <a id="1">[1]</a> L’anonymisation de données personnelles, 2020.
@@ -98,3 +169,29 @@ of current approaches. Artificial Intelligence in Medicine, page 102845, 2024.
 <a id="4">[4]</a> Zhengliang Liu, Yue Huang, Xiaowei Yu, Lu Zhang, Zihao Wu, Chao Cao, Haixing Dai,
 Lin Zhao, Yiwei Li, Peng Shu, et al. Deid-gpt: Zero-shot medical text de-identification by
 gpt-4. arXiv preprint arXiv:2303.11032, 2023.
+
+<a id="5">[5]</a> Lakshmi Radhakrishnan, Gundolf Schenk, Kathleen Muenzen, Boris Oskotsky, Habibeh
+Ashouri Choshali, Thomas Plunkett, Sharat Israni, and Atul J Butte. A certified de-
+identification system for all clinical text documents for information extraction at scale.
+JAMIA open, 6(3):ooad045, 2023.
+
+<a id="6">[6]</a> Cyril Grouin, Arnaud Rosier, Olivier Dameron, and Pierre Zweigenbaum. Une procédure
+d’anonymisation à deux niveaux pour créer un corpus de comptes rendus hospitaliers. In
+Risques, technologies de l’information pour les pratiques médicales, pages 23–34. Springer,
+2009.
+
+<a id="7">[7]</a> Quentin Gicquel, Denys Proux, Pierre Marchal, Caroline Hagége, Yasmina Berrouane,
+Stéfan J Darmoni, Suzanne Pereira, Frédérique Segond, and Marie-Héléne Metzger.
+Évaluation d’un outil d’aide á l’anonymisation des documents médicaux basé sur le traite-
+ment automatique du langage naturel. In Systèmes d’information pour l’amélioration de
+la qualité en santé, pages 165–176. Springer, 2011.
+
+<a id="8">[8]</a> Nicolas Paris, Matthieu Doutreligne, Adrien Parrot, and Xavier Tannier. Désidentification
+de comptes-rendus hospitaliers dans une base de données omop. In TALMED 2019: Sym-
+posium satellite francophone sur le traitement automatique des langues dans le domaine
+biomédical, 2019.
+<a id="9">[9]</a> Mohamed El Azzouzi, Gouenou Coatrieux, Reda Bellafqira, Denis Delamarre, Christine
+Riou, Naima Oubenali, Sandie Cabon, Marc Cuggia, and Guillaume Bouzillé. Automatic
+de-identification of french electronic health records: a cost-effective approach exploiting
+distant supervision and deep learning models. BMC Medical Informatics and Decision
+Making, 24(1):54, 2024.
