@@ -1,7 +1,7 @@
 # TextMiningFAMAF2024
 ## Proyecto: Desidentificación en textos de salud
 
-###1- Contexto
+1. Contexto
 
 El Grupo OMCC (Online Medical Concept Company) 1 , establecido en Luxemburgo, establecido en
 Luxemburgo, es una organización que trabaja en el tratamiento del cáncer mediante radioterapia
@@ -11,7 +11,7 @@ tros médicos, hasta el desarrollo y soporte de paquetes de software para la ges
 estas actividades clı́nicas. Opera en Europa y en África, con el objetivo de hacer que el tratamiento
 oncológico sea accesible a todos los pacientes y con las mismas tecnologı́as.
 
-###2- El projecto
+2. El projecto
 
 En el campo de la oncologı́a, el procesamiento del lenguaje natural (PLN) desempeña un papel muy
 importante en la extracción de información valiosa. En este contexto, aparecen varios campos de
