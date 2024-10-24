@@ -159,14 +159,19 @@ score.
 
 ## 2.3 Avances y replanificación
 
-1. Hacer un preprocesamiento o curage de datos sobre los reportes patológicos: tokenizar, probar
-sacar “stop words” o no. ** Implementado **
-2. Definir reglas para identificar las posibilidades de variaciones del nombre de los pacientes, fecha
-de nacimiento, dirección, etc. ** Implementado, pero funciona mejor con herramientas existentes **
-3. Obtener base de datos de medicos y centros de salud del pais correspondiente. ** Cambiado por: Utilizar el nombre de médicos asociados al paciente en el sistema. ** 
-4. Definir reglas para buscar información de los médicos y centros de salud previamente definidos. ** No lo hice por la misma razon que las reglas para nombre de paciente** 
-5. Podemos usar métodos/modelos de NER existentes para extraer entidades. Dependiendo de los 
-modelos las entidades que podemos obtener. Probar distintos modelos. ** Hecho: **
+1. **Hecho**: El curage de datos hecho depende mucho de las herramientas posteriores.
+En todos los casos se uso un eliminado de blancos extras. Se probo tokenizacion con Spacy pero solo es util cuando se usan reglas.
+Se elimino la hipotesis de sacar las "stop words" porque como mencionado en los comentarios puede interferir luego en la fase de extraccion de datos.
+
+2. **Hecho**: Se uso el nombre, fecha de nacimiento y dirección de los pacientes (la información se la puede sacar del sistema). Y se buscó esta información en los textos. 
+Sin embargo dado que los textos traen mucho ruido que proviene del OCR, en una evaluación anecdótica se vió que no es suficiente.  
+
+3. **Postergado**: Obtener base de datos de medicos y centros de salud del pais correspondiente es algo a probar posteriormente por falta de tiempo. 
+
+4. **Postergado**: Idem anterior
+
+5. **Hecho**: Método existente de anonymizacion utilizado: EDS-Pseudo [[10]](#10). 
+
 6. Hacer fine tunning con los datos extraidos de las reglas y obtener nuevas entidades?
 7. Anotación: parte de la anotación es con las reglas y/o algoritmo de NER elegido. Pero para
 visualizar los resultados una herramienta de anotación es de mucha ayuda. La herramienta
@@ -215,3 +220,7 @@ Riou, Naima Oubenali, Sandie Cabon, Marc Cuggia, and Guillaume Bouzillé. Automa
 de-identification of french electronic health records: a cost-effective approach exploiting
 distant supervision and deep learning models. BMC Medical Informatics and Decision
 Making, 24(1):54, 2024.
+
+<a id="10">[10]</a> Xavier Tannier  , Perceval Wajsbürt , Alice Calliger  , Basile Dura  , Alexandre Mouchet , Martin Hilka and Romain Bey. 
+Development and Validation of a Natural Language Processing Algorithm to Pseudonymize Documents in the Context of a Clinical Data Warehouse. 
+Methods of Information in Medicine. 2024. 
