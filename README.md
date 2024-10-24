@@ -139,7 +139,7 @@ anotados para entrenar un metodo estadistico.
 2. Otro enfoque podria ser hacer etapas donde aplicamos primero reglas y luego un método estadis-
 tico.
 
-## 2.3 Planificación
+## 2.3 Planificación Inicial
 1. Hacer un preprocesamiento o curage de datos sobre los reportes patológicos: tokenizar, probar
 sacar “stop words” o no.
 2. Definir reglas para identificar las posibilidades de variaciones del nombre de los pacientes, fecha
@@ -156,6 +156,26 @@ tenga licencia de software libre. Una que comencé a explorar hace un tiempo (no
 detalle) es Inception [], TODO: ver otras.Doccano??
 8. Evaluación: Las métricas de evaluación elegidas son: Exactitud, Precisión, Sensibilidad y F1
 score.
+
+## 2.3 Avances y replanificación
+
+1. Hacer un preprocesamiento o curage de datos sobre los reportes patológicos: tokenizar, probar
+sacar “stop words” o no. ** Implementado **
+2. Definir reglas para identificar las posibilidades de variaciones del nombre de los pacientes, fecha
+de nacimiento, dirección, etc. ** Implementado, pero funciona mejor con herramientas existentes **
+3. Obtener base de datos de medicos y centros de salud del pais correspondiente. ** Cambiado por: Utilizar el nombre de médicos asociados al paciente en el sistema. ** 
+4. Definir reglas para buscar información de los médicos y centros de salud previamente definidos. ** No lo hice por la misma razon que las reglas para nombre de paciente** 
+5. Podemos usar métodos/modelos de NER existentes para extraer entidades. Dependiendo de los 
+modelos las entidades que podemos obtener. Probar distintos modelos. ** Hecho: **
+6. Hacer fine tunning con los datos extraidos de las reglas y obtener nuevas entidades?
+7. Anotación: parte de la anotación es con las reglas y/o algoritmo de NER elegido. Pero para
+visualizar los resultados una herramienta de anotación es de mucha ayuda. La herramienta
+elegida debe ejecutarse en local debido a la privacidad de los datos. Además seria bueno que
+tenga licencia de software libre. Una que comencé a explorar hace un tiempo (no en mucho
+detalle) es Inception [], TODO: ver otras.Doccano??
+8. Evaluación: Las métricas de evaluación elegidas son: Exactitud, Precisión, Sensibilidad y F1
+score.
+
 
 ## References
 <a id="1">[1]</a> L’anonymisation de données personnelles, 2020.
