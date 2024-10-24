@@ -1,7 +1,7 @@
 # TextMiningFAMAF2024
 ## Proyecto: Desidentificación en textos de salud
 
-1. Contexto
+## 1. Contexto
 
 El Grupo [OMCC](https://www.omcc.lu/) (Online Medical Concept Company), establecido en Luxemburgo, establecido en
 Luxemburgo, es una organización que trabaja en el tratamiento del cáncer mediante radioterapia
@@ -11,7 +11,7 @@ tros médicos, hasta el desarrollo y soporte de paquetes de software para la ges
 estas actividades clı́nicas. Opera en Europa y en África, con el objetivo de hacer que el tratamiento
 oncológico sea accesible a todos los pacientes y con las mismas tecnologı́as.
 
-2. El projecto
+## 2. El projecto
 
 En el campo de la oncologı́a, el procesamiento del lenguaje natural (PLN) desempeña un papel muy
 importante en la extracción de información valiosa. En este contexto, aparecen varios campos de
@@ -64,23 +64,37 @@ identificación directa (DIE).
 En Francia, para garantizar la protección de la confidencialidad de los datos personales en los
 registros médicos electrónicos, es necesario cumplir con las regulaciones gubernamentales establecidas
 por la Autoridad de Protección de Datos francesa, la Comisión Nacional de Informática y Libertades
-(CNIL), [cni20][[1]](#1) y el Reglamento General de Protección de Datos (RGPD). [rgp].
+(CNIL) [[1]](#1) y el Reglamento General de Protección de Datos (RGPD) [[2]](#2) . 
 
-```bibtex
-@article{azzouzi2024automatic,
-  title={Automatic de-identification of French electronic health records: a cost-effective approach exploiting distant supervision and deep learning models},
-  author={Azzouzi, Mohamed El and Coatrieux, Gouenou and Bellafqira, Reda and Delamarre, Denis and Riou, Christine and Oubenali, Naima and Cabon, Sandie and Cuggia, Marc and Bouzill{\'e}, Guillaume},
-  journal={BMC Medical Informatics and Decision Making},
-  volume={24},
-  number={1},
-  pages={54},
-  year={2024},
-  publisher={Springer}
-}
-```
+## 2.1. Estado del arte
+
+En [[3]](#3) los autores ofrecen un estudio sobre la evolución de la desidentificación para textos
+clı́nicos en inglés durante los últimos trece años. Afirman que los enfoques anteriores eran principal-
+mente hı́bridos, basados en reglas y aprendizaje automático, con mucha ingenierı́a de caracterı́sticas
+y posprocesamiento. También afirman que las mejoras de rendimiento recientes se deben a redes neu-
+ronales recurrentes de inferencia de caracterı́sticas, alcanzando resltados de F1 del estado del arte (más
+del 98 %). Sin embargo, destacan la necesidad de más datos anotados para generalizar mejor en la
+amplia gama de subdominios clı́nicos.
+
+En [[4]](#4) Los autores presentan un framework de desidentificación basado en GPT4 (“DeID-
+GPT”) para identificar y eliminar automáticamente la información de identificación. Sin embargo, a
+pesar de sus impresionantes resultados, debido al uso de ChatGPT con API en lı́nea, su sistema no
+se puede aplicar en un entorno hospitalario ya que los datos del paciente no se pueden almacenar ni
+transmitir a una parte externa no autorizada. Además, resaltan la necesidad de utilizar LLM de código
+abierto o capacitados internamente para esta tarea (en lugar de GPT4 ya que su código no está abierto
+al público), para garantizar la seguridad, la privacidad, la integridad y el cumplimiento adecuado de
+las pautas HIPAA.
+
+
 ## References
-<a id="1">[1]</a> 
-Dijkstra, E. W. (1968). 
-Go to statement considered harmful. 
-Communications of the ACM, 11(3), 147-148.
+<a id="1">[1]</a> L’anonymisation de données personnelles, 2020.
 
+<a id="2">[2]</a> Data protection in the eu.
+
+<a id="3">[3]</a> Aleksandar Kovačević, Bojana Bašaragin, Nikola Milošević, and Goran Nenadić. De-
+identification of clinical free text using natural language processing: A systematic review
+of current approaches. Artificial Intelligence in Medicine, page 102845, 2024.
+
+<a id="4">[4]</a> Zhengliang Liu, Yue Huang, Xiaowei Yu, Lu Zhang, Zihao Wu, Chao Cao, Haixing Dai,
+Lin Zhao, Yiwei Li, Peng Shu, et al. Deid-gpt: Zero-shot medical text de-identification by
+gpt-4. arXiv preprint arXiv:2303.11032, 2023.
