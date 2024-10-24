@@ -19,7 +19,9 @@ trabajo que pueden ayudar a mejorar la atención sanitaria. Por ejemplo podriamo
 el reconocimiento de entidades nombradas (NER) y la extracción de información, para ayudar en
 la identificación de regiones/grupos que desarrollan tumores especı́ficos. Esta información se puede
 obtener a partir de los datos existentes en los centros de tratamiento, en particular de los informes
-patológicos existentes. Por ejemplo, en la Figura 1 mostramos el ejemplo de un caso de cáncer de
+patológicos existentes. Por ejemplo, en la Imagen 1 mostramos el ejemplo de un caso de cáncer de
 mama. A la izquierda podemos ver el formulario de diagnóstico y a la derecha la última página
 del documento de patologı́a correspondiente. Los colores representan la alineación entre el texto del
 documento de patologı́a y los campos que corresponden a este texto en el formulario de diagnóstico.
+
+![Imagen 1]()
