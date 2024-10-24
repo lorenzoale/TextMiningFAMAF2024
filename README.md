@@ -170,7 +170,7 @@ Sin embargo dado que los textos traen mucho ruido que proviene del OCR, en una e
 
 4. **Postergado**: Idem anterior
 
-5. **Hecho**: Método existente de anonymizacion utilizado: EDS-Pseudo [[10]](#10). 
+5. **Hecho**: Método existente de anonymizacion utilizado: [EDS-Pseudo](https://github.com/aphp/eds-pseudo) [[10]](#10). 
 
 6. Hacer fine tunning con los datos extraidos de las reglas y obtener nuevas entidades?
 7. Anotación: parte de la anotación es con las reglas y/o algoritmo de NER elegido. Pero para
