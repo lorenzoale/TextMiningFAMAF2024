@@ -24,4 +24,4 @@ mama. A la izquierda podemos ver el formulario de diagnóstico y a la derecha la
 del documento de patologı́a correspondiente. Los colores representan la alineación entre el texto del
 documento de patologı́a y los campos que corresponden a este texto en el formulario de diagnóstico.
 
-![Imagen 1]()
+![Imagen 1](/img/exemple_syst.jpg)
