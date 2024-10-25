@@ -171,7 +171,8 @@ Sin embargo dado que los textos traen mucho ruido que proviene del OCR, en una e
 4. **Postergado**: Idem anterior
 
 5. **Hecho**: Método existente de anonymizacion utilizado: [EDS-Pseudo](https://github.com/aphp/eds-pseudo) [[10]](#10). 
-5.1. También se usó [Presidio](https://microsoft.github.io/presidio/tutorial/11_custom_anonymization/), una herramienta muy utilizada para deidentificación. Se trata de una libreria de NLP open-source desarrollada por Microsoft. 
+También se usó [Presidio](https://microsoft.github.io/presidio/tutorial/11_custom_anonymization/), una herramienta muy utilizada para deidentificación. Se trata de una libreria de NLP open-source desarrollada por Microsoft. En este caso se utilizaron patrones combinados con el método adaptado para usar Transformers (que consiste de un pipeline spaCy que encapsula un modelo de HuggingFace). 
+Presidio es una herramienta muy completa. Sin embargo haría falta continuar probando reglas y combinaciones de reglas y métodos estadísticos, dado que en una comparación anecdótica con el método estadístico propuesto por la Aphp, este último muestra mejor rendimiento. 
 
 6. Hacer fine tunning con los datos extraidos de las reglas y obtener nuevas entidades?
 7. Anotación: parte de la anotación es con las reglas y/o algoritmo de NER elegido. Pero para
