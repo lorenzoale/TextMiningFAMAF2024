@@ -201,9 +201,9 @@ Presidio es una herramienta muy completa. Sin embargo haría falta continuar pro
 
 6. **Se deja como trabajo futuro por falta de tiempo**  Hacer fine tunning con los datos extraídos de las reglas y obtener nuevas entidades. Sería interesante utilizar la herramienta que mejor resulte en la evaluación para generar datos anotados y utilizar estos datos para hacer fine tuning sobre el modelo EDS-Pseudo [[10]](#10). 
 
-7. **A implementar entre 28/10 y 30/10** Anotación: Hacer la anotación de un pequeño test set para la evaluación.
+7. **A implementar entre 28/10 y 01/11** Anotación: Hacer la anotación de un pequeño test set para la evaluación.
 
-8. **A implementar entre 31/10 y 01/11** Evaluación: Las métricas de evaluación elegidas son: Exactitud, Precisión, Sensibilidad y F1. 
+8. **A implementar entre 02/11 y 11/11** Evaluación: Las métricas de evaluación elegidas son: Exactitud, Precisión, Sensibilidad y F1. 
 score. Evaluar y comparar el método que utiliza Presidio y EDS-Pseudo [[10]](#10).
 
 
