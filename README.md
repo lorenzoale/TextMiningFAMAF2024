@@ -174,7 +174,7 @@ Respuesta: La idea es extraer "regiones" más que lugares específicos, teniendo
 
 Respuesta: Los datos a utilizar corresponden al texto extraído por el OCR de los reportes patológicos de los pacientes. Además, podemos usar el nombre, fecha de nacimiento, dirección, y médicos asociados a cada paciente para asegurarse que el nombre no aparece en el texto desidentificado. Un ejemplo tomado de internet de un reporte patologico:
 
-![Imagen 2](/img/info2.png)
+![Imagen 2](/img/info21.png)
 ![Imagen 3](/img/info1.png)
 
 5. Pregunta: Con respecto a la curación de datos, tendría cuidado al momento de decidir que es un “stop word”, ya que el tema del proyecto es sobre la medicina, quizás desde un lado de minería de datos se puedan escapar o mal interpretar palabras que sí son útiles.
