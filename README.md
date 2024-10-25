@@ -174,13 +174,11 @@ Sin embargo dado que los textos traen mucho ruido que proviene del OCR, en una e
 También se usó [Presidio](https://microsoft.github.io/presidio/tutorial/11_custom_anonymization/), una herramienta muy utilizada para deidentificación. Se trata de una libreria de NLP open-source desarrollada por Microsoft. En este caso se utilizaron patrones combinados con el método adaptado para usar Transformers (que consiste de un pipeline spaCy que encapsula un modelo de HuggingFace). 
 Presidio es una herramienta muy completa. Sin embargo haría falta continuar probando reglas y combinaciones de reglas y métodos estadísticos, dado que en una comparación anecdótica con el método estadístico propuesto por la Aphp, este último muestra mejor rendimiento. 
 
-6. Hacer fine tunning con los datos extraidos de las reglas y obtener nuevas entidades?
-7. Anotación: parte de la anotación es con las reglas y/o algoritmo de NER elegido. Pero para
-visualizar los resultados una herramienta de anotación es de mucha ayuda. La herramienta
-elegida debe ejecutarse en local debido a la privacidad de los datos. Además seria bueno que
-tenga licencia de software libre. Una que comencé a explorar hace un tiempo (no en mucho
-detalle) es Inception [], TODO: ver otras.Doccano??
-8. Evaluación: Las métricas de evaluación elegidas son: Exactitud, Precisión, Sensibilidad y F1
+6. **Se deja como trabajo futuro por falta de tiempo** Hacer fine tunning con los datos extraidos de las reglas y obtener nuevas entidades?
+
+7. **A implementar entre 28/10 y 30/10** Anotación: Hacer la anotación de un pequeño test set para la evaluación.
+
+8. **A implementar entre 31/10 y 01/11** Evaluación: Las métricas de evaluación elegidas son: Exactitud, Precisión, Sensibilidad y F1. 
 score.
 
 
