@@ -158,14 +158,30 @@ detalle) es Inception [], TODO: ver otras.Doccano??
 score.
 
 ## 2.3 Comentarios de otros grupos
-1. Pregunta: ¿Por qué trabajan sobre el documento escaneado y no la versión original digital?. Respuesta: El procedimiento estándar es el siguiente: luego de ser diagnosticado, el paciente llega al centro de radioterapia con su reporte patológico y otros estudios médicos en forma de papel. Este papel es escaneado e incorporado al sistema. En general este tipo de reportes no se mandan por mail de forma digital.2. Pregunta: Siendo el caso que van a definir reglas, ¿consideraron probar algún algoritmo de minado de reglas que les pueda simplificar la tarea?Respuesta: Muchas gracias, es una opción a considerar pero dado las restricciones de tiempo, como trabajo futuro. Por el momento las reglas son bastantes simples y lo que funciona mejor es combinarlas con métodos estadísticos. 3. Pregunta: ¿Pensaron en evaluar si los datos desidentificados afectan el desempeño a la hora de identificar regiones/grupos que desarrollan tumores específicos?
-Respuesta: La idea es extraer "regiones" más que lugares específicos, teniendo en cuenta un número mínimo por regiones para evitar la posible identificación en casos muy específicos. 4.  Pregunta: Por ahí faltaría dar más información de los datos a utilizar, el formato y si es necesario realizar algún tipo de preprocesamiento.
-Respuesta: Los datos a utilizar corresponden al texto extraído por el OCR de los reportes patológicos de los pacientes. Además, podemos usar el nombre, fecha de nacimiento, dirección, y médicos asociados a cada paciente para asegurarse que el nombre no aparece en el texto desidentificado. Un ejemplo dado por ChatGPT para un caso de Carcinoma ductal infiltrante de mama derecha.""Informe AnatomopatológicoPaciente: [Nombre de la paciente]
+1. Pregunta: ¿Por qué trabajan sobre el documento escaneado y no la versión original digital?. 
+
+Respuesta: El procedimiento estándar es el siguiente: luego de ser diagnosticado, el paciente llega al centro de radioterapia con su reporte patológico y otros estudios médicos en forma de papel. Este papel es escaneado e incorporado al sistema. En general este tipo de reportes no se mandan por mail de forma digital.
+
+2. Pregunta: Siendo el caso que van a definir reglas, ¿consideraron probar algún algoritmo de minado de reglas que les pueda simplificar la tarea?
+
+Respuesta: Muchas gracias, es una opción a considerar pero dado las restricciones de tiempo, como trabajo futuro. Por el momento las reglas son bastantes simples y lo que funciona mejor es combinarlas con métodos estadísticos.
+
+3. Pregunta: ¿Pensaron en evaluar si los datos desidentificados afectan el desempeño a la hora de identificar regiones/grupos que desarrollan tumores específicos?
+
+Respuesta: La idea es extraer "regiones" más que lugares específicos, teniendo en cuenta un número mínimo por regiones para evitar la posible identificación en casos muy específicos.
+
+4. Pregunta: Por ahí faltaría dar más información de los datos a utilizar, el formato y si es necesario realizar algún tipo de preprocesamiento.
+
+Respuesta: Los datos a utilizar corresponden al texto extraído por el OCR de los reportes patológicos de los pacientes. Además, podemos usar el nombre, fecha de nacimiento, dirección, y médicos asociados a cada paciente para asegurarse que el nombre no aparece en el texto desidentificado. Un ejemplo dado por ChatGPT para un caso de Carcinoma ductal infiltrante de mama derecha.
+
+""Informe AnatomopatológicoPaciente: [Nombre de la paciente]
 Edad: [Edad de la paciente]
 Fecha: [Fecha del informe]
 Número de Caso: [Número de identificación]DiagnósticoCarcinoma ductal infiltrante de mama derecha.Descripción MacroscópicaTamaño de la muestra: Fragmento de tejido de [describir tamaño, ej. 3 x 2.5 x 1 cm].Aspecto macroscópico: Tejido de consistencia firme, de color blanquecino-grisáceo, con áreas de posible necrosis y fibrosis.Lesión principal: Masa nodular de aproximadamente [indicar tamaño en cm] localizada en [ubicación dentro de la mama, ej. cuadrante superior externo], mal delimitada y de consistencia aumentada respecto al tejido adyacente.Descripción MicroscópicaTipo de tumor: Carcinoma ductal infiltrante.Grado histológico: Grado [1, 2 o 3] según la clasificación de Nottingham.Patrón de crecimiento: Disposición en cordones y nidos de células epiteliales de aspecto atípico con invasión del estroma.Atipia celular: Moderada a marcada.Actividad mitótica: [Bajo, moderado o alto], con un conteo de [indicar número] mitosis en 10 campos de gran aumento.Necrosis: [Presente o ausente], con áreas de necrosis en [indicar porcentaje aproximado].Estroma tumoral: Predomina fibrosis reactiva, con infiltrado linfocitario peritumoral.Invasión vascular y linfática: [Presente o ausente].Márgenes de resección: [Libres o comprometidos], con una distancia mínima de [indicar distancia en mm] del margen más cercano.InmunohistoquímicaReceptores de estrógeno (RE): [Positivo o negativo, con el porcentaje de células].Receptores de progesterona (RP): [Positivo o negativo, con el porcentaje de células].HER2/neu: [Positivo o negativo, indicar método de medición, ej. IHQ o FISH].Índice de proliferación (Ki-67): [Indicar porcentaje].ConclusiónCarcinoma ductal infiltrante de mama derecha de grado [1, 2 o 3], con [describir estado de receptores hormonales y HER2]. Márgenes de resección [libres o comprometidos]. Invasión [vascular y/o linfática presente o ausente].""
 
-5. Pregunta: Con respecto a la curación de datos, tendría cuidado al momento de decidir que es un “stop word”, ya que el tema del proyecto es sobre la medicina, quizás desde un lado de minería de datos se puedan escapar o mal interpretar palabras que sí son útiles.Respuesta: Definitivamente hace falta un preprocesamiento. En primera instancia al utilizar un OCR haría falta un corrector ortográfico. Además una tokenización. Se consideró la eliminación de stop words pero se descartó la idea como sugerido por los comentarios.
+5. Pregunta: Con respecto a la curación de datos, tendría cuidado al momento de decidir que es un “stop word”, ya que el tema del proyecto es sobre la medicina, quizás desde un lado de minería de datos se puedan escapar o mal interpretar palabras que sí son útiles.
+
+Respuesta: Definitivamente hace falta un preprocesamiento. En primera instancia al utilizar un OCR haría falta un corrector ortográfico. Además una tokenización. Se consideró la eliminación de stop words pero se descartó la idea como sugerido por los comentarios.
 
 
 ## 2.4 Avances y replanificación
