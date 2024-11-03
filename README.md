@@ -197,13 +197,15 @@ Sin embargo dado que los textos traen mucho ruido que proviene del OCR, en una e
 
 5. **Hecho**: Método existente de anonymizacion utilizado: [EDS-Pseudo](https://github.com/aphp/eds-pseudo) [[10]](#10). 
 También se usó [Presidio](https://microsoft.github.io/presidio/tutorial/11_custom_anonymization/), una herramienta muy utilizada para deidentificación. Se trata de una libreria de NLP open-source desarrollada por Microsoft. En este caso se utilizaron patrones combinados con el método adaptado para usar Transformers (que consiste de un pipeline spaCy que encapsula un modelo de HuggingFace). 
-Presidio es una herramienta muy completa. Sin embargo haría falta continuar probando reglas y combinaciones de reglas y métodos estadísticos, dado que en una comparación anecdótica con el método estadístico EDS-Pseudo, este último muestra mejor rendimiento. 
+Presidio es una herramienta muy completa. Sin embargo haría falta continuar probando reglas y combinaciones de reglas y métodos estadísticos, dado que en una comparación anecdótica con el método estadístico EDS-Pseudo, este último muestra mejor rendimiento.
 
-6. **Se deja como trabajo futuro por falta de tiempo**  Hacer fine tunning con los datos extraídos de las reglas y obtener nuevas entidades. Sería interesante utilizar la herramienta que mejor resulte en la evaluación para generar datos anotados y utilizar estos datos para hacer fine tuning sobre el modelo EDS-Pseudo [[10]](#10). 
+Ejemplo de resultado obtenido: ![Imagen 4](/img/aphpEx.png)
 
-7. **A implementar entre 28/10 y 01/11** Anotación: Hacer la anotación de un pequeño test set para la evaluación.
+7. **Se deja como trabajo futuro por falta de tiempo**  Hacer fine tunning con los datos extraídos de las reglas y obtener nuevas entidades. Sería interesante utilizar la herramienta que mejor resulte en la evaluación para generar datos anotados y utilizar estos datos para hacer fine tuning sobre el modelo EDS-Pseudo [[10]](#10). 
 
-8. **A implementar entre 02/11 y 11/11** Evaluación: Las métricas de evaluación elegidas son: Exactitud, Precisión, Sensibilidad y F1. 
+8. **A implementar entre 28/10 y 01/11** Anotación: Hacer la anotación de un pequeño test set para la evaluación.
+
+9. **A implementar entre 02/11 y 11/11** Evaluación: Las métricas de evaluación elegidas son: Exactitud, Precisión, Sensibilidad y F1. 
 score. Evaluar y comparar el método que utiliza Presidio y EDS-Pseudo [[10]](#10).
 
 
