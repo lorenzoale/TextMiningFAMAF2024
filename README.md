@@ -73,9 +73,9 @@ Para esto en el sitio de Health data hub se provee un starter kit (https://www.h
 - En segundo lugar, debo solicitar la autorización de la CNIL, salvo en casos muy específicos en los que mi estudio pueda acogerse a procedimientos derogatorios o simplificados. En este caso, puedo realizar mi proyecto en el marco de una metodología de referencia (MR).
 
 Una de esas MR se aplica en el caso en el que quiero reutilizar datos de salud existentes y tengo la capacidad de informar individualmente a las personas interesadas antes de implementar mi estudio, la MR 004. Sin embargo, se me prohibirá, por ejemplo:
-▪ recopilar datos personales;
-▪ Realizar un cotejo con otra fuente;
-▪ Utilizar datos SNDS que aún no estén encadenados en una fuente de datos de terceros.
+- recopilar datos personales;
+- Realizar un cotejo con otra fuente;
+- Utilizar datos SNDS que aún no estén encadenados en una fuente de datos de terceros.
 
 
 
