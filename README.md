@@ -65,6 +65,7 @@ En Francia, para garantizar la protección de la confidencialidad de los datos p
 registros médicos electrónicos, es necesario cumplir con las regulaciones gubernamentales establecidas
 por la Autoridad de Protección de Datos francesa, la Comisión Nacional de Informática y Libertades
 (CNIL) [[1]](#1) y el Reglamento General de Protección de Datos (RGPD) [[2]](#2) . 
+
 La CNIL establece para la reutilización de datos personales de salud (): 
 En primer lugar, mi proyecto debe perseguir un propósito de interés público. Esto no es a priori incompatible con una actividad comercial pero tiene que quedar explicado en el protocolo.
 En segundo lugar, debo solicitar la autorización de la CNIL, salvo en casos muy específicos en los que mi estudio pueda acogerse a procedimientos derogatorios o simplificados. En este caso, puedo realizar mi proyecto en el marco de una metodología de referencia (MR).
