@@ -69,8 +69,8 @@ por la Autoridad de Protección de Datos francesa, la Comisión Nacional de Info
 Cualquier proyecto que utilice datos sanitarios debe ser examinado por el comité científico y ético nacional (CESREES) antes de ser confiado a la CNIL. 
 Para esto en el sitio de Health data hub se provee un starter kit (https://www.health-data-hub.fr/starter-kit). En el se establecen las siguientes condiciones: 
 
-En primer lugar, mi proyecto debe perseguir un propósito de interés público. Esto no es a priori incompatible con una actividad comercial pero tiene que quedar explicado en el protocolo.
-En segundo lugar, debo solicitar la autorización de la CNIL, salvo en casos muy específicos en los que mi estudio pueda acogerse a procedimientos derogatorios o simplificados. En este caso, puedo realizar mi proyecto en el marco de una metodología de referencia (MR).
+- En primer lugar, mi proyecto debe perseguir un propósito de interés público. Esto no es a priori incompatible con una actividad comercial pero tiene que quedar explicado en el protocolo.
+- En segundo lugar, debo solicitar la autorización de la CNIL, salvo en casos muy específicos en los que mi estudio pueda acogerse a procedimientos derogatorios o simplificados. En este caso, puedo realizar mi proyecto en el marco de una metodología de referencia (MR).
 
 Una de esas MR se aplica en el caso en el que quiero reutilizar datos de salud existentes y tengo la capacidad de informar individualmente a las personas interesadas antes de implementar mi estudio, la MR 004. Sin embargo, se me prohibirá, por ejemplo:
 ▪ recopilar datos personales;
