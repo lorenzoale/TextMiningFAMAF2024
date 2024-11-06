@@ -3,7 +3,7 @@
 
 ## 1. Contexto
 
-El Grupo [OMCC](https://www.omcc.lu/) (Online Medical Concept Company), establecido en Luxemburgo, establecido en
+El Grupo [OMCC](https://www.omcc.lu/) (Online Medical Concept Company), establecido en
 Luxemburgo, es una organización que trabaja en el tratamiento del cáncer mediante radioterapia
 externa, oncologı́a médica, rayos X de diagnóstico y patologı́a anatómica.
 Los servicios técnicos ofrecidos por OMCC abarcan desde la construcción y equipamiento de cen-
